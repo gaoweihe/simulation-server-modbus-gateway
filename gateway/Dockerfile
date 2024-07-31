@@ -22,7 +22,7 @@ FROM python:3.8-alpine
 
 WORKDIR /app
 
-ARG RUNTIME_DEPS="libssl1.1"
+ARG RUNTIME_DEPS="libssl3"
 RUN apk add --no-cache ${RUNTIME_DEPS}
 
 COPY --from=builder /app /app
